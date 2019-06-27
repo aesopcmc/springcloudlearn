@@ -1,0 +1,59 @@
+server:
+  # 指定Tomcat端口
+  port: 8030
+spring:
+  application:
+    # 指定注册到eureka server上的服务名称
+    name: microservice-consumer-movie-feign
+  jpa:
+    # 让hibernate打印执行的SQL
+    show-sql: true
+logging:
+  level:
+    root: INFO
+    # 配置日志级别，让hibernate打印出执行的SQL参数
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.chao.cloud.feign: debug #Feign日志输出
+
+eureka:
+  client:
+    service-url:
+      # 指定eureka server通信地址，注意/eureka/小尾巴不能少
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    # 是否注册IP到eureka server，如不指定或设为false，那就会注册主机名到eureka server
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    #开启断路器（feign整合了断路器，只需要开启即可）
+    enabled: true
+  client:
+    config:
+#      配置指定的FeignClient
+#      microservice-provider-user:
+#        loggerLevel: FULL
+
+#      默认全局配置
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+#        NONE【性能最佳，适用于生产】：不记录任何日志（默认值）。
+#        BASIC【适用于生产环境追踪问题】：仅记录请求方法、URL、响应状态代码以及执行时间。
+#        HEADERS：记录BASIC级别的基础上，记录请求和响应的header。
+#        FULL【比较适用于开发及测试环境定位问题】：记录请求和响应的header、body和元数据。
+        loggerLevel: FULL
+
+#监控应用运行状况 http://{ip}:{port}/actuator/{endpoint}
+#健康检查 http://{ip}:{port}/actuator/health
+#熔断信息 http://{ip}:{port}/actuator/hystrix.stream
+management:
+  endpoint:
+    health:
+      # 是否展示健康检查详情
+      show-details: always
+    web:
+      exposure:
+        include: 'hystrix.stream'

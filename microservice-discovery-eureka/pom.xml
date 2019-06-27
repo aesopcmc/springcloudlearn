@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.chao.cloud</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>microservice-discovery-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>microservice-discovery-eureka</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
