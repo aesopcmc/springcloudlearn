@@ -26,9 +26,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--监控应用的运行状况
-        http://{ip}:{port}/actuator/{endpoint}
-        -->
+        <!--监控应用的运行状况  http://{ip}:{port}/actuator/{endpoint} -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -52,7 +50,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
     </dependencies>
 
     <!-- 引入spring cloud的依赖，不能少，主要用来管理Spring Cloud生态各组件的版本 -->
