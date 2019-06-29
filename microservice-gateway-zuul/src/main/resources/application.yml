@@ -1,10 +1,12 @@
+server:
+  port: 8050
 spring:
   application:
     name: microservice-gateway-zuul
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+      defaultZone: http://user:123123@peer1:8761/eureka/,http://user:123123@peer2:8762/eureka/
 management:
   endpoints:
     web:
@@ -25,9 +27,13 @@ logging:
     com.netflix: DEBUG
 
 ##集群配置，只需要按照不同的端口启动即可
-#
+#---
 #server:
 #  port: 8051
+#spring:
+#  profiles: zuul1
 #---
 #server:
 #  port: 8052
+#spring:
+#  profiles: zuul2
