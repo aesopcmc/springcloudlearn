@@ -7,33 +7,33 @@ spring:
       name: user           # 配置登录的账号是user
       password: 123123     # 配置登录的密码是123123
 
----
-spring:
-  profiles: peer1                                 # 指定profile=peer1
+#---
+#spring:
+#  profiles: peer1                                 # 指定profile=peer1
 server:
   port: 8761
 eureka:
-  instance:
-    hostname: peer1                               # 指定当profile=peer1时，主机名是peer1
+#  instance:
+#    hostname: peer1                               # 指定当profile=peer1时，主机名是peer1
   client:
     serviceUrl:
       defaultZone: http://user:123123@peer2:8762/eureka/      # 将自己注册到peer2这个Eureka上面去
   server:
     enable-self-preservation: false               #本地测试环境下建议禁用自我保护模式
 
----
-spring:
-  profiles: peer2
-server:
-  port: 8762
-eureka:
-  instance:
-    hostname: peer2
-    #配置心跳检测时长
-    #lease-renewal-interval-in-seconds: 2
-  client:
-    serviceUrl:
-      defaultZone: http://user:123123@peer1:8761/eureka/
-  server:
-    enable-self-preservation: false #本地测试环境下建议禁用自我保护模式
+#---
+#spring:
+#  profiles: peer2
+#server:
+#  port: 8762
+#eureka:
+#  instance:
+#    hostname: peer2
+#    #配置心跳检测时长
+#    #lease-renewal-interval-in-seconds: 2
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:123123@peer1:8761/eureka/
+#  server:
+#    enable-self-preservation: false #本地测试环境下建议禁用自我保护模式
 
