@@ -10,17 +10,17 @@ spring:
 #---
 #spring:
 #  profiles: peer1                                 # 指定profile=peer1
-server:
-  port: 8761
-eureka:
+#server:
+#  port: 8761
+#eureka:
 #  instance:
 #    hostname: peer1                               # 指定当profile=peer1时，主机名是peer1
-  client:
-    serviceUrl:
-      defaultZone: http://user:123123@peer2:8762/eureka/      # 将自己注册到peer2这个Eureka上面去
-  server:
-    enable-self-preservation: false               #本地测试环境下建议禁用自我保护模式
-
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:123123@peer2:8762/eureka/      # 将自己注册到peer2这个Eureka上面去
+#  server:
+#    enable-self-preservation: false               #本地测试环境下建议禁用自我保护模式
+#
 #---
 #spring:
 #  profiles: peer2
@@ -37,3 +37,14 @@ eureka:
 #  server:
 #    enable-self-preservation: false #本地测试环境下建议禁用自我保护模式
 
+#普通，单个eureka配置
+server:
+  port: 8761
+eureka:
+  client:
+    # 是否要注册到其他Eureka Server实例
+    register-with-eureka: false
+    # 是否要从其他Eureka Server实例获取数据
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
