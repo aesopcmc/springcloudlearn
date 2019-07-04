@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/microservice-config-client/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-provider-user-sleuth-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/aesop-utils/pom.xml" />
       </list>
     </option>
   </component>

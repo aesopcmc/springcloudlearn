@@ -20,10 +20,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="aesop-utils" target="1.5" />
       <module name="microservice-config-client" target="1.8" />
       <module name="microservice-config-server" target="1.8" />
       <module name="microservice-consumer-movie-feign" target="1.8" />
       <module name="microservice-discovery-eureka" target="1.8" />
+      <module name="microservice-discovery-eureka-compose-test" target="1.8" />
       <module name="microservice-gateway-zuul" target="1.8" />
       <module name="microservice-hystrix-dashboard" target="1.8" />
       <module name="microservice-hystrix-turbine" target="1.8" />
@@ -39,6 +41,7 @@
       <module name="microservice-config-server" options="-parameters" />
       <module name="microservice-consumer-movie-feign" options="-parameters" />
       <module name="microservice-discovery-eureka" options="-parameters" />
+      <module name="microservice-discovery-eureka-compose-test" options="-parameters" />
       <module name="microservice-gateway-zuul" options="-parameters" />
       <module name="microservice-hystrix-dashboard" options="-parameters" />
       <module name="microservice-hystrix-turbine" options="-parameters" />

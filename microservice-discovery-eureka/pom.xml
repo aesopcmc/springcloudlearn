@@ -19,7 +19,27 @@
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>maven-nexus</id>
+            <name>maven-nexus</name>
+            <url>http://192.168.5.130:8081/nexus/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <!--<dependency>-->
+        <!--    <groupId>com.chao.myutils</groupId>-->
+        <!--    <artifactId>aesop-utils</artifactId>-->
+        <!--    <version>1.1-RELEASES</version>-->
+        <!--</dependency>-->
+
         <!--Eureka Server-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -81,5 +101,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

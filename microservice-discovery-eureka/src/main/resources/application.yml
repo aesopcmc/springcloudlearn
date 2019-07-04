@@ -7,6 +7,7 @@ spring:
       name: user           # 配置登录的账号是user
       password: 123123     # 配置登录的密码是123123
 
+#1.集群配置
 #---
 #spring:
 #  profiles: peer1                                 # 指定profile=peer1
@@ -37,7 +38,7 @@ spring:
 #  server:
 #    enable-self-preservation: false #本地测试环境下建议禁用自我保护模式
 
-#普通，单个eureka配置
+#2.普通，单个eureka配置
 server:
   port: 8761
 eureka:
