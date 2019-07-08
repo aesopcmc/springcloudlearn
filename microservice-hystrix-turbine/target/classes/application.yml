@@ -1,0 +1,15 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: microservice-hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123123@peer1:8761/eureka/,http://user:123123@peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+turbine:
+  # 要监控的微服务列表，多个用,分隔
+  appConfig: microservice-consumer-movie-feign,microservice-provider-user
+  clusterNameExpression: "'default'"
