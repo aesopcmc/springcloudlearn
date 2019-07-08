@@ -1,0 +1,18 @@
+server:
+  port: 8040
+spring:
+  application:
+    # 必须与Nacos中创建的配置Data Id匹配（除了.properties或者.yaml后缀）。默认情况下Data ID的名称格式是这样的：${spring.application.name}.properties
+    name: alibaba-nacos-config-client
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.5.130:8848
+        #prefix: example          #指定nacos中的Data ID=example.properties
+        file-extension: yaml     #指定nacos中的Data ID=xxx.yaml
+        #group: DEV_GROUP         #指定nacos中的Group=DEV_GROUP
+        #namespace: d802eaef-372b-494c-9fdc-37746468e7cd  #这里需要注意namespace的配置不是使用名称，而是使用Namespace的ID。
+
+        #在发布脚本的启动命令中，用指令的方式来动态指定，会更加灵活！。
+        # 常用指令：-Dspring.profiles.active=DEV
+        #          -Dspring.cloud.nacos.config.namespace=

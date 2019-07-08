@@ -1,0 +1,32 @@
+server:
+  # 指定Tomcat端口
+  port: 8020
+spring:
+  application:
+    # 指定注册到nacos上的服务名称
+    name: microservice-provider-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.5.130:8848
+  jpa:
+    # 让hibernate打印执行的SQL
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    # 配置日志级别，让hibernate打印出执行的SQL参数
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+management:
+  endpoint:
+    health:
+      # 是否展示健康检查详情
+      show-details: always
+    web:
+      exposure:
+        # 暴露metrics端点，如需暴露多个，用,分隔；如需暴露所有端点，用'*'
+        include: '*'
