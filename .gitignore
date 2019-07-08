@@ -1,0 +1,15 @@
+.DS_Store
+/dist/
+/test/unit/coverage/
+/test/e2e/reports/
+
+# Editor directories and files
+# use dev to copy test.properties
+target
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iml

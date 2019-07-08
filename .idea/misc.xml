@@ -18,6 +18,9 @@
         <option value="$PROJECT_DIR$/microservice-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-provider-user-sleuth-zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/aesop-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/alibaba-microservice-simple-provider-user/pom.xml" />
+        <option value="$PROJECT_DIR$/alibaba-microservice-consumer-movie/pom.xml" />
+        <option value="$PROJECT_DIR$/alibaba-nacos-config-client/pom.xml" />
       </list>
     </option>
   </component>
