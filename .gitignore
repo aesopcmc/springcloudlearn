@@ -1,15 +1,25 @@
-.DS_Store
-/dist/
-/test/unit/coverage/
-/test/e2e/reports/
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-# Editor directories and files
-# use dev to copy test.properties
-target
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
 .idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+*.iws
 *.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
